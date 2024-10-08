@@ -1,0 +1,85 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: url(Planet/background.png) no-repeat;
+  background-size: cover;
+  height:100vh;
+
+}
+.container {
+  position: relative;
+  width: 100%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center ;
+  overflow: hidden;
+  }
+
+.container img {
+  position: absolute;
+  width: 100%;
+  height:100%;
+  top:0;
+  left:0;
+  object-fit:contain;
+}
+
+.container h2 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+  font-size: 50px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 32px;
+}
+.container h2 span {
+  position: relative;
+  top: 10px; 
+  display: block;
+  text-align: center;
+  font-size: 35px;
+  letter-spacing: 19px;
+}
+
+@media (max-width:800px){
+  .container h2 {
+    font-size: 60px;
+    letter-spacing: 19px;
+  }
+}
+.container h2 span {
+  font-size: 26px;
+
+}
+.startt {
+  cursor: pointer; /* Change cursor to indicate it's a button */
+  transition: transform 0.2s ease-in-out; /* Add transition for smooth scaling */
+}
+
+.startt:hover {
+  transform: scale(1.1); /* Increase size on hover */
+}
+.container .hi-text h1{
+  font-size:small;
+  background: #8a787800;
+  margin-top: -732px;
+  width: 390px;
+  height: 254px;
+  margin-left: 544px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 110px;
+  font-family: '29LT Arapix';
+  color: #fff;
+}

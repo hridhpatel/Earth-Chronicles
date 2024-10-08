@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  *{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container{
+  font-family:"Press Start 2P";
+  Padding:40px;
+  text-align: center;
+  margin-top: 80px;
+  margin-left: 175px;
+  margin-right: 175px;
+  margin-bottom: 130px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  background-color:#273937 ;
+  opacity:0.8;
+  border: #273937;
+  border-radius: 40px;
+  size: 200px;
+  max-width: 80%;
+  min-width: 30%;
+}
+.container {
+  line-height: 23px;
+  color:#C7DD90;
+}
+.buttons {
+  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+}
+.buttons img {
+  height:15%;
+  width:15%;
+  margin: 0 10px;
+}
+.buttons img:hover {
+  cursor:pointer;
+  transform: scale(1.1);
+}
+.pickbtn {
+  text-align: center;
+  position: absolute;
+  bottom: 120px;
+  left: 250px;
+  right: 250px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.pickbtn {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+.button-container {
+  font-family: "Press Start 2P";
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+  cursor: pointer; /* Show pointer on hover */
+}
+
+.button-container img {
+  height:100%;
+  width:100%;
+}
+
+</style>
+  <title>12P</title>
+</head>
+<body style="background:url(backgtounds/21bg.png); background-size: cover; background-repeat: no-repeat;">
+  <div class="holder">
+    <div class="container" id="text">
+     <h3 class="typewriter"></h3>
+    </div>
+    <div class="pickbtn">
+      <div class="button-container" onclick="window.location.href='s20.html'">
+        <img src="Buttons/firebtn.png" alt="">
+      </div>
+      <div class="button-container" onclick="window.location.href='s19.html'">
+        <img src="Buttons/recyclebtn.png"alt="">
+      </div>
+    </div>
+       <div class="buttons">
+        <img src="Buttons/backbtn.png" onclick="window.location.href='s17.html'">
+    </div>
+    </div>
+  <script>
+    function typewriterEffect(textElementId, text, delay) {
+  const textElement = document.getElementById(textElementId);
+  
+  let index = 0;
+  let isTyping = true;
+  const type = () => {
+    if (isTyping) {
+      textElement.textContent += text[index];
+      index++;
+      if (index >= text.length) {
+        isTyping = false;
+      } else {
+        setTimeout(type, delay);
+      }
+    }
+  };
+  
+  type();
+  
+  // Attach the click event listener to the textElement directly
+  textElement.addEventListener("click", () => {
+    if (!isTyping) {
+      textElement.textContent = text;
+    }
+  });
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    typewriterEffect('text',"What should Noah do?", 75);
+  });
+  </script>
+</body>
+</html>

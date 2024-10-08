@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Norah</title>
+  <link href="Norah.css" rel="stylesheet">
+  <link href="Allpages.css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="container" id="text">
+    <h3 class="typewriter"></h3>
+   </div>
+ <div class="containerr"> 
+   <img class="object" src="Planet/1.png" data-value="-2" alt=""style="z-index:-1;">
+   <img class="object" src="Planet/3.png" data-value="-4" alt=""style="z-index:-1;">
+   <img class="object" src="Planet/4.png" data-value="6" alt=""style="z-index:-1;">
+   <img class="object" src="Planet/6.png" data-value="4" alt=""style="z-index:-1;">
+   <img class="nora" src="Norah and Noah/6.png" style="z-index:-1;">
+   <div class="text"><img src="Norah and Noah/box.png" style="z-index: 2;"><p></p></div>
+   <img class="btn" src="Norah and Noah/Sure.png"onclick="window.location.href='s1.html'">
+
+ </div>
+  <div class="HI" style="transform: translateY(-479px);"></div>
+  <script type="text/javascript">
+    document.addEventListener("mousemove", parallax);
+    function parallax (e){
+      document.querySelectorAll(".object").forEach(function(move){
+        var moving_value = move.getAttribute("data-value");
+        var x = (e.clientX * moving_value)/250;
+        var y = (e.clientY * moving_value)/250;
+
+        move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
+});
+    
+  }
+  </script>
+
+</body>

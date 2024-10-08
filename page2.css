@@ -1,0 +1,76 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: url(Planet/background.png) no-repeat;
+  background-size: cover;
+  height:100vh;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items:center ;
+  overflow: hidden;
+  }
+
+.container img {
+  position: absolute;
+  width: 100%;
+  height:100%;
+  top:0;
+  left:0;
+  object-fit:contain;
+}
+div:has(.custom-video-section) {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+video {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height:100%;
+}
+@media screen and (min-width: 800px) {
+  .video-for-mobile {
+  display: none;}}
+  
+@media screen and (max-width: 800px) {
+  .video-for-desktop {
+  display: none;}}
+.options {
+  align-items: center;
+  z-index: 2; /* Set a higher z-index */
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.options img {
+  height:15%;
+  width:15%;
+}
+.options .left{
+  margin-left: 260px;
+}
+.options .right {
+  margin-right: 260px;
+}
+.options img:hover {
+  cursor:pointer;
+  transform: scale(1.1);
+}
+  

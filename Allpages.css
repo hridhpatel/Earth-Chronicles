@@ -1,0 +1,89 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container{
+  font-family:"Press Start 2P";
+  Padding:40px;
+  text-align: center;
+  margin-top: 130px;
+  margin-left: 175px;
+  margin-right: 175px;
+  margin-bottom: 130px;
+  align-items: center;
+  position: relative;
+  display: flex;
+  background-color:#273937 ;
+  opacity:0.8;
+  border: #273937;
+  border-radius: 40px;
+  size: 200px;
+  max-width: 80%;
+  min-width: 30%;
+}
+.container {
+  line-height: 23px;
+  color:#C7DD90;
+}
+.buttons {
+  margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding:10px;
+}
+.buttons img {
+  height:15%;
+  width:15%;
+  margin: 0 10px;
+}
+.buttons img:hover {
+  cursor:pointer;
+  transform: scale(1.1);
+}
+.pickbtn {
+  text-align: center;
+
+  position: absolute;
+  bottom: 120px;
+  left: 250px;
+  right: 250px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.pickbtn {
+  display: flex;
+  gap: 20px; /* Space between buttons */
+}
+
+.button-container {
+  font-family: "Press Start 2P";
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align items */
+  cursor: pointer; /* Show pointer on hover */
+}
+
+.button-container img {
+  height:120px;
+  width:150px;
+}
+
+.button-container span {
+  margin-top: 8px; /* Space between image and text */
+  font-size: 16px; /* Adjust font size as needed */
+  text-align: center; /* Center the text */
+}

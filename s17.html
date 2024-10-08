@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Allpages.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>12P</title>
+</head>
+<body style="background:url(backgtounds/21bg.png); background-size: cover; background-repeat: no-repeat;">
+  <div class="holder">
+    <div class="container" id="text">
+     <h3 class="typewriter"></h3>
+    </div>
+       <div class="buttons">
+        <img src="Buttons/backbtn.png" onclick="window.location.href='s16.html'">
+        <img src="Buttons/nextbtn.png" onclick="window.location.href='s18.html'">
+       
+    </div>
+    </div>
+  <script>
+    function typewriterEffect(textElementId, text, delay) {
+  const textElement = document.getElementById(textElementId);
+  
+  let index = 0;
+  let isTyping = true;
+  const type = () => {
+    if (isTyping) {
+      textElement.textContent += text[index];
+      index++;
+      if (index >= text.length) {
+        isTyping = false;
+      } else {
+        setTimeout(type, delay);
+      }
+    }
+  };
+  
+  type();
+  
+  // Attach the click event listener to the textElement directly
+  textElement.addEventListener("click", () => {
+    if (!isTyping) {
+      textElement.textContent = text;
+    }
+  });
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    typewriterEffect('text',"What will Noah choose to do ? Should Noah leave the waste as it was and continue his journey? Or should he collect the scattered waste in the forest and recycle the combustible materials?", 75);
+  });
+  </script>
+</body>
+</html>
